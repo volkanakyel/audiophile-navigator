@@ -25,7 +25,6 @@
       </div>
       <MarketingService />
     </div>
-    <FooterSection />
   </div>
 </template>
 <script setup lang="ts"></script>

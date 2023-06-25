@@ -1,18 +1,18 @@
 <template>
-  <div class="w-full bg-dark-100">
+  <header class="w-full bg-dark-100">
     <div class="max-w-screen-xl mx-auto p-8">
       <div class="flex justify-between text-white">
         <p>Audiophile</p>
-        <ul class="flex justify-center gap-8 uppercase">
+        <nav class="flex justify-center gap-8 uppercase">
           <nuxt-link to="/">Home</nuxt-link>
           <nuxt-link to="/headphones">Headphones</nuxt-link>
           <nuxt-link to="/speakers">Speakers</nuxt-link>
           <nuxt-link to="/earphones">Earphones</nuxt-link>
-        </ul>
+        </nav>
         <img src="../assets/images/card.svg" alt="" />
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup></script>
