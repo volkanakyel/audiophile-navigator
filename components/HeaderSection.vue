@@ -4,8 +4,8 @@
       <div class="flex justify-between text-white">
         <p>Audiophile</p>
         <ul class="flex justify-center gap-8 uppercase">
-          <li>Home</li>
-          <li>Headphones</li>
+          <nuxt-link to="/">Home</nuxt-link>
+          <nuxt-link to="/headphones">Headphones</nuxt-link>
           <li>Speakers</li>
           <li>Earphones</li>
         </ul>
