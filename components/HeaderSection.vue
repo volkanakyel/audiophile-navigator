@@ -6,8 +6,8 @@
         <ul class="flex justify-center gap-8 uppercase">
           <nuxt-link to="/">Home</nuxt-link>
           <nuxt-link to="/headphones">Headphones</nuxt-link>
-          <li>Speakers</li>
-          <li>Earphones</li>
+          <nuxt-link to="/speakers">Speakers</nuxt-link>
+          <nuxt-link to="/earphones">Earphones</nuxt-link>
         </ul>
         <img src="../assets/images/card.svg" alt="" />
       </div>
