@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-white container mx-auto py-32">
+    <div class="bg-white container mx-auto">
       <ProductSection />
     </div>
     <div>

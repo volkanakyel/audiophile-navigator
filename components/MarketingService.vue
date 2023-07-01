@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 flex justify-center">
+  <div class="my-20 flex justify-center">
     <div class="w-1/2 p-12">
       <p class="text-lg uppercase mb-4">
         Bringing you the <span class="text-orange">best</span> audio gear

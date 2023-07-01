@@ -1,14 +1,14 @@
 <template>
   <div class="w-100 bg-black text-white">
-    <div class="container mx-auto max-w-screen-lg p-12">
+    <div class="container mx-auto max-w-screen-xl p-12">
       <div class="flex justify-between mb-8">
-        <p>Audiophile</p>
-        <ul class="flex justify-center gap-5 uppercase">
-          <li>Home</li>
-          <li>Headphones</li>
-          <li>Speakers</li>
-          <li>Earphones</li>
-        </ul>
+        <img src="../assets/images/shared/logo.svg" alt="" />
+        <nav class="flex justify-center gap-5 uppercase">
+          <nuxt-link to="/">Home</nuxt-link>
+          <nuxt-link to="/headphones">Headphones</nuxt-link>
+          <nuxt-link to="/speakers">Speakers</nuxt-link>
+          <nuxt-link to="/earphones">Earphones</nuxt-link>
+        </nav>
       </div>
       <div class="flex justify-between items-center">
         <div>

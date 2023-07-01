@@ -3,8 +3,9 @@
     <div class="bg-white container mx-auto">
       <ProductSection />
       <ProductSection />
+      <ProductSection />
     </div>
-    <div>
+    <div class="">
       <ItemsSection />
     </div>
     <MarketingService />
