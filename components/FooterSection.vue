@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 bg-black text-white">
-    <div class="container mx-auto py-14">
+    <div class="container mx-auto max-w-screen-lg p-12">
       <div class="flex justify-between mb-8">
         <p>Audiophile</p>
         <ul class="flex justify-center gap-5 uppercase">

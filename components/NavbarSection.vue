@@ -9,7 +9,8 @@
           <nuxt-link to="/speakers">Speakers</nuxt-link>
           <nuxt-link to="/earphones">Earphones</nuxt-link>
         </nav>
-        <img src="../assets/images/card.svg" alt="" />
+        <img src="../assets/images/card.svg" alt="cart" @click="openCart" />
+        <CartViewer v-if="0" />
       </div>
     </div>
   </header>
