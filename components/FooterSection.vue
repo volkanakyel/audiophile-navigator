@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 bg-black text-white">
-    <div class="container mx-auto max-w-screen-xl p-12">
+    <div class="max-w-6xl mx-auto p-12">
       <div class="flex justify-between mb-8">
         <img src="../assets/images/shared/logo.svg" alt="" />
         <nav class="flex justify-center gap-5 uppercase">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-white container mx-auto py-32">
+    <div class="bg-white max-w-6xlr mx-auto py-32">
       <ProductSection />
       <ProductSection />
       <ProductSection />

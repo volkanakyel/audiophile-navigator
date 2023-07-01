@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-white container mx-auto">
+    <div class="bg-white max-w-6xl mx-auto">
       <ProductSection />
       <ProductSection />
       <ProductSection />
