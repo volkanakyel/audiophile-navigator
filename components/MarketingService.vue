@@ -1,6 +1,6 @@
 <template>
-  <div class="my-20 flex justify-center">
-    <div class="w-1/2 p-12">
+  <div class="my-20 flex flex-col justify-center md:flex-row">
+    <div class="w-full p-6 md:w-1/2 md:p-12">
       <p class="text-lg uppercase mb-4">
         Bringing you the <span class="text-orange">best</span> audio gear
       </p>
@@ -14,7 +14,7 @@
       </p>
     </div>
     <img
-      class="w-1/2 rounded-lg"
+      class="w-full rounded-lg md:w-1/2"
       src="../assets/images/image-gallery-1.jpg"
       alt=""
     />
