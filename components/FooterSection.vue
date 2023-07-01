@@ -1,9 +1,9 @@
 <template>
   <div class="w-100 bg-black text-white">
-    <div class="max-w-6xl mx-auto p-12">
-      <div class="flex justify-between mb-8">
+    <div class="max-w-6xl mx-auto p-8 md:p-12">
+      <div class="justify-between mb-8 md:flex">
         <img src="../assets/images/shared/logo.svg" alt="" />
-        <nav class="flex justify-center gap-5 uppercase">
+        <nav class="flex justify-start gap-5 uppercase mt-4 md:mt-0">
           <nuxt-link to="/">Home</nuxt-link>
           <nuxt-link to="/headphones">Headphones</nuxt-link>
           <nuxt-link to="/speakers">Speakers</nuxt-link>
@@ -19,8 +19,13 @@
             our demo facility - we’re open 7 days a week.
           </p>
           <p class="mt-8 opacity-50">Copyright 2021. All Rights Reserved</p>
+          <div class="flex gap-4 md:hidden">
+            <img src="../assets/images/icon-facebook.svg" alt="" />
+            <img src="../assets/images/icon-twitter.svg" alt="" />
+            <img src="../assets/images/icon-instagram.svg" alt="" />
+          </div>
         </div>
-        <div class="flex gap-4">
+        <div class="hidden md:block">
           <img src="../assets/images/icon-facebook.svg" alt="" />
           <img src="../assets/images/icon-twitter.svg" alt="" />
           <img src="../assets/images/icon-instagram.svg" alt="" />
