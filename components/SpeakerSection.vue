@@ -2,7 +2,7 @@
   <div class="w-100 bg-orange text-white relative mt-20 py-28 rounded-lg">
     <img
       class="w-40 absolute bottom-0 left-20 md:w-96"
-      src="../assets/images/image-category-page-preview.png"
+      src="../assets/images/shared/desktop/image-category-thumbnail-speakers.png"
       alt=""
     />
     <div class="flex flex-col items-end justify-center">

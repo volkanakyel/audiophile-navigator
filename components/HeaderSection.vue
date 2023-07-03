@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full bg-[url('../images/image-hero.jpg')] bg-cover bg-center">
+  <div
+    class="w-full bg-[url('../images/home/mobile/image-header.jpg')] md:bg-[url('../images/home/desktop/image-hero.jpg')] bg-cover bg-center"
+  >
     <div class="max-w-screen-xl mx-auto">
       <hr class="separator" />
       <div class="w-full p-10 gap-4 items-center my-20">

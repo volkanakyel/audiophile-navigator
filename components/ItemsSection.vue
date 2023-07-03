@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-between gap-8 py-20">
+  <div
+    class="flex flex-wrap sm:flex-nowrap items-center justify-center md:justify-between gap-8 py-20"
+  >
     <ItemCard />
     <ItemCard />
     <ItemCard />

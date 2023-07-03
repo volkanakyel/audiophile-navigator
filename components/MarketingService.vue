@@ -1,5 +1,10 @@
 <template>
   <div class="my-20 flex flex-col justify-center md:flex-row">
+    <img
+      class="w-full rounded-lg max-w-2xl md:w-1/2 md:hidden"
+      src="../assets/images/shared/tablet/image-best-gear.jpg"
+      alt=""
+    />
     <div class="w-full p-6 md:w-1/2 md:p-12">
       <p class="text-lg uppercase mb-4">
         Bringing you the <span class="text-orange">best</span> audio gear
@@ -14,8 +19,8 @@
       </p>
     </div>
     <img
-      class="w-full rounded-lg md:w-1/2"
-      src="../assets/images/image-gallery-1.jpg"
+      class="w-full rounded-lg max-w-2xl md:w-1/2 hidden md:block"
+      src="../assets/images/shared/desktop/image-best-gear.jpg"
       alt=""
     />
   </div>
