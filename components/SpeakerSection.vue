@@ -15,7 +15,7 @@
         Upgrade to premium speakers that are phenomenally built to deliver truly
         remarkable sound.
       </p>
-      <button class="bg-black text-white p-4 uppercase mb-8 md:mb-0">
+      <button class="bg-black text-white p-4 uppercase my-8 md:mb-0">
         See Product
       </button>
     </div>
