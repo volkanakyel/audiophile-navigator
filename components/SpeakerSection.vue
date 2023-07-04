@@ -1,17 +1,23 @@
 <template>
-  <div class="w-100 bg-orange text-white relative mt-20 py-28 rounded-lg">
+  <div
+    class="w-100 bg-orange text-white relative px-20 pb-0 pt-16 flex flex-col justify-center rounded-lg items-center gap-14 md:gap-20 md:flex-row"
+  >
     <img
-      class="w-40 absolute bottom-0 left-20 md:w-96"
-      src="../assets/images/shared/desktop/image-category-thumbnail-speakers.png"
+      class="max-w-sm w-full md:max-w-md md:w-1/2"
+      src="../assets/images/home/desktop/image-speaker-zx9.png"
       alt=""
     />
-    <div class="flex flex-col items-end justify-center">
-      <p class="text-xl">ZX9 <br />SPEAKER</p>
-      <p class="opacity-50">
+    <div
+      class="flex flex-col items-center justify-center w-full md:items-start md:w-1/2"
+    >
+      <p class="text-xl text-center md:text-left">ZX9 <br />SPEAKER</p>
+      <p class="opacity-50 text-center md:text-left mb-8 md:mb-0">
         Upgrade to premium speakers that are phenomenally built to deliver truly
         remarkable sound.
       </p>
-      <button class="bg-black text-white p-4 uppercase">See Product</button>
+      <button class="bg-black text-white p-4 uppercase mb-8 md:mb-0">
+        See Product
+      </button>
     </div>
   </div>
 </template>

@@ -13,34 +13,29 @@
         </nav>
       </div>
       <div class="flex justify-center">
-        <div>
-          <p class="w-96 opacity-50 text-center">
-            Audiophile is an all in one stop to fulfill your audio needs. We're
-            a small team of music lovers and sound specialists who are devoted
-            to helping you get the most out of personal audio. Come and visit
-            our demo facility - we’re open 7 days a week.
-          </p>
-          <p class="mt-8 opacity-50 text-center">
-            Copyright 2021. All Rights Reserved
-          </p>
-          <div
-            class="flex flex-row items-center justify-center mt-10 gap-4 md:hidden"
-          >
-            <img
-              src="../assets/images/shared/desktop/icon-facebook.svg"
-              alt=""
-            />
-            <img
-              src="../assets/images/shared/desktop/icon-twitter.svg"
-              alt=""
-            />
-            <img
-              src="../assets/images/shared/desktop/icon-instagram.svg"
-              alt=""
-            />
-          </div>
+        <p class="opacity-50 text-center md:text-left">
+          Audiophile is an all in one stop to fulfill your audio needs. We're a
+          small team of music lovers and sound specialists who are devoted to
+          helping you get the most out of personal audio. Come and visit our
+          demo facility - we’re open 7 days a week.
+        </p>
+      </div>
+      <div class="md:flex justify-between items-center mt-8">
+        <p class="opacity-50 text-center md:text-left">
+          Copyright 2021. All Rights Reserved
+        </p>
+        <div
+          class="flex flex-row items-center justify-center mt-10 gap-4 md:hidden"
+        >
+          <img src="../assets/images/shared/desktop/icon-facebook.svg" alt="" />
+          <img src="../assets/images/shared/desktop/icon-twitter.svg" alt="" />
+          <img
+            src="../assets/images/shared/desktop/icon-instagram.svg"
+            alt=""
+          />
         </div>
-        <div class="hidden md:block text-center">
+
+        <div class="hidden md:flex md:gap-4 text-center">
           <img src="../assets/images/shared/desktop/icon-facebook.svg" alt="" />
           <img src="../assets/images/shared/desktop/icon-twitter.svg" alt="" />
           <img
