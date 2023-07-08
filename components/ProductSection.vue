@@ -1,10 +1,17 @@
 <template>
   <div
-    class="mt-20 flex justify-center items-center flex-col md:flex-row gap-8"
+    class="mt-20 flex justify-center md:items-center flex-col md:flex-row gap-8"
   >
     <img
+      v-if="imagePosition === 'left'"
       class="w-full rounded-lg max-w-2xl md:w-1/2"
-      src="../assets/images/shared/desktop/image-xx59-headphones.jpg"
+      :src="imageSrc"
+      alt=""
+    />
+    <img
+      v-if="imagePosition === 'right'"
+      class="w-full rounded-lg max-w-2xl md:w-1/2 block md:hidden"
+      :src="imageSrc"
       alt=""
     />
     <div
@@ -23,9 +30,23 @@
         See Product
       </button>
     </div>
+    <img
+      v-if="imagePosition === 'right'"
+      class="w-full rounded-lg max-w-2xl md:w-1/2 hidden md:block"
+      :src="imageSrc"
+      alt=""
+    />
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+defineProps<{
+  title: string;
+  description: string;
+  buttonText: string;
+  imageSrc: string;
+  imagePosition?: "left" | "right";
+}>();
+</script>
 
 <style scoped></style>
