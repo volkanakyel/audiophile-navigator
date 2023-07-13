@@ -19,12 +19,10 @@
     >
       <p class="uppercase mb-4 text-orange md:text-left">New Product</p>
       <p class="uppercase text-lg text-center md:text-left">
-        XX99 Mark II Headphones
+        {{ title }}
       </p>
       <p class="text-center md:text-left">
-        The new XX99 Mark II headphones is the pinnacle of pristine audio. It
-        redefines your premium headphone experience by reproducing the balanced
-        depth and precision of studio-quality sound.
+        {{ description }}
       </p>
       <button class="uppercase bg-orange p-3 my-4 text-white">
         See Product
@@ -43,7 +41,6 @@
 defineProps<{
   title: string;
   description: string;
-  buttonText: string;
   imageSrc: string;
   imagePosition?: "left" | "right";
 }>();

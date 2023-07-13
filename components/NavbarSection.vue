@@ -1,7 +1,7 @@
 <template>
   <header class="w-full bg-dark-100">
     <div class="max-w-screen-xl mx-auto p-8">
-      <div class="flex justify-between text-white">
+      <div class="flex justify-between text-white relative">
         <img
           src="../assets/images/shared/tablet/icon-hamburger.svg"
           class="md:hidden mr-3"
@@ -17,14 +17,27 @@
         <img
           src="../assets/images/shared/desktop/icon-cart.svg"
           alt="cart"
-          @click="openCart"
+          @click="toggleCard"
         />
-        <CartViewer v-if="0" />
+        <CartViewer
+          :class="{ 'cart-open': cartOpen }"
+          class="absolute hidden right-0 top-20"
+        />
       </div>
     </div>
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const cartOpen = ref(false);
+const toggleCard = () => {
+  cartOpen.value = !cartOpen.value;
+};
+</script>
 
-<style scoped></style>
+<style scoped>
+.cart-open {
+  display: block;
+}
+</style>

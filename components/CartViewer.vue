@@ -11,7 +11,9 @@
       <p class="uppercase">Total</p>
       <p class="uppercase">$ 5,396</p>
     </div>
-    <button class="uppercase w-full bg-orange p-3 text-white">Checkout</button>
+    <button class="uppercase w-full bg-orange p-3 text-white">
+      <nuxt-link to="/checkout">Checkout</nuxt-link>
+    </button>
   </div>
 </template>
 
