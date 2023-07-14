@@ -19,11 +19,9 @@
         image-src="../../assets/images/shared/desktop/image-xx59-headphones.jpg"
         description="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
       />
-    </div>
-    <div class="">
       <ItemsSection />
+      <MarketingService />
     </div>
-    <MarketingService />
   </div>
 </template>
 <script setup lang="ts"></script>
