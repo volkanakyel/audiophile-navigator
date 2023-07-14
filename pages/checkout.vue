@@ -104,8 +104,30 @@
             </div>
           </div>
         </div>
-        <div class="bg-white max-w-xs p-8 rounded-lg">
-          <h2 class="uppercase text-m">Summary</h2>
+        <div class="bg-white max-w-sm p-8 rounded-lg">
+          <h2 class="uppercase text-m mb-6">Summary</h2>
+          <CartItem class="mb-6" />
+          <CartItem class="mb-6" />
+          <CartItem class="mb-6" />
+          <div class="flex justify-between mb-4">
+            <p class="uppercase">Total</p>
+            <p class="uppercase">$ 5,396</p>
+          </div>
+          <div class="flex justify-between mb-4">
+            <p class="uppercase">Shipping</p>
+            <p class="uppercase">$ 50</p>
+          </div>
+          <div class="flex justify-between mb-4">
+            <p class="uppercase">VAT (included)</p>
+            <p class="uppercase">$ 1,079</p>
+          </div>
+          <div class="flex justify-between mb-4">
+            <p class="uppercase">Grand Total</p>
+            <p class="uppercase text-orange">$ 5,446</p>
+          </div>
+          <button class="uppercase w-full bg-orange p-3 text-white">
+            <nuxt-link to="/checkout">Continue & Pay</nuxt-link>
+          </button>
         </div>
       </div>
     </div>
