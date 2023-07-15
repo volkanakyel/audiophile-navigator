@@ -14,15 +14,31 @@
           <p>$ 2,999</p>
         </div>
       </div>
-      <div class="flex gap-2 bg-grey-100 py-2 px-3">
+      <div v-if="isSummarySection" class="flex gap-2 bg-grey-100 py-2 px-3">
         <p>-</p>
         <p>1</p>
         <p>+</p>
+      </div>
+      <div v-else>
+        <p>x{{ itemQuantity }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  isSummarySection: {
+    type: String,
+    required: false,
+    default: false,
+  },
+  itemQuantity: {
+    type: Number,
+    required: false,
+    default: 1,
+  },
+});
+</script>
 
 <style scoped></style>

@@ -4,9 +4,9 @@
       <p class="uppercase">Cart (3)</p>
       <p class="uppercase">Remove All</p>
     </div>
-    <CartItem class="mb-6" />
-    <CartItem class="mb-6" />
-    <CartItem class="mb-6" />
+    <CartItem is-summary-section="true" class="mb-6" />
+    <CartItem is-summary-section="true" class="mb-6" />
+    <CartItem is-summary-section="true" class="mb-6" />
     <div class="flex justify-between mb-8">
       <p class="uppercase">Total</p>
       <p class="uppercase">$ 5,396</p>
