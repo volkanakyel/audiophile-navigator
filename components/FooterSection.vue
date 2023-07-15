@@ -6,10 +6,16 @@
           class="flex flex-col items-center md:justify-start gap-5 uppercase mt-4 sm:flex-row md:mt-0"
         >
           <img src="../assets/images/shared/desktop/logo.svg" alt="" />
-          <nuxt-link to="/">Home</nuxt-link>
-          <nuxt-link to="/headphones">Headphones</nuxt-link>
-          <nuxt-link to="/speakers">Speakers</nuxt-link>
-          <nuxt-link to="/earphones">Earphones</nuxt-link>
+          <nuxt-link to="/" class="hover:text-orange">Home</nuxt-link>
+          <nuxt-link to="/headphones" class="hover:text-orange"
+            >Headphones</nuxt-link
+          >
+          <nuxt-link to="/speakers" class="hover:text-orange"
+            >Speakers</nuxt-link
+          >
+          <nuxt-link to="/earphones" class="hover:text-orange"
+            >Earphones</nuxt-link
+          >
         </nav>
       </div>
       <div class="flex justify-center">
