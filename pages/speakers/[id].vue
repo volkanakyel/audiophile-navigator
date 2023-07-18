@@ -1,20 +1,25 @@
 <template>
   <div class="px-7">
     <div class="bg-white max-w-6xl mx-auto">
-      <p class="capitalize text-grey-300">Go back</p>
+      <p class="capitalize text-grey-300 mt-20" @click="goToCategory">
+        Go back
+      </p>
       <BuyProduct
         :image-src="obj.image.desktop"
         :description="obj.description"
         :title="obj.name"
+        :price="obj.price"
       />
-      <div class="flex justify-center">
-        <div>
-          <h2>Features</h2>
-          <p>{{ obj.description }}</p>
+      <div
+        class="flex justify-between items-center flex-col gap-20 mt-20 md:flex-row"
+      >
+        <div class="md:w-2/3">
+          <h2 class="text-l uppercase">Features</h2>
+          <p class="mt-6">{{ obj.features }}</p>
         </div>
-        <div>
-          <h2>In the box</h2>
-          <ul>
+        <div class="self-start md:w-1/3">
+          <h2 class="text-l uppercase">In the box</h2>
+          <ul class="mt-6">
             <li>Headphones Unit</li>
             <li>Headphones Unit</li>
             <li>Headphones Unit</li>
@@ -22,17 +27,34 @@
           </ul>
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2">
+      <div
+        class="flex gap-4 items-center justify-center flex-col md:flex-row mt-16"
+      >
         <div class="order-2 md:order-1">
-          <img :src="obj.image.desktop" alt="Image 1" class="w-full h-auto" />
+          <img
+            :src="obj.gallery.first.tablet"
+            alt="Image 1"
+            class="w-full h-auto mb-6 rounded-lg"
+          />
+          <img
+            :src="obj.gallery.second.tablet"
+            alt="Image 2"
+            class="w-full h-auto rounded-lg"
+          />
         </div>
         <div class="order-1 md:order-2">
-          <img :src="obj.image.desktop" alt="Image 2" class="w-full h-auto" />
-        </div>
-        <div class="col-span-1 md:col-span-2">
-          <img :src="obj.image.desktop" alt="Image 3" class="w-full h-auto" />
+          <img
+            :src="obj.gallery.third.tablet"
+            alt="Image 3"
+            class="w-full h-auto rounded-lg"
+          />
         </div>
       </div>
+      <div>
+        <h2 class="uppercase text-center mt-20 text-l">You may also like</h2>
+        <ItemsSection />
+      </div>
+
       <MarketingService />
     </div>
   </div>
@@ -41,4 +63,8 @@
 import data from "~/data/data.json";
 const obj = data.filter((product) => product.id === 1)[0];
 console.log(obj);
+
+const goToCategory = () => {
+  this.$router.push(`/${obj.category}`);
+};
 </script>
