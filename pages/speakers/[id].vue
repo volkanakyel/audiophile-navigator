@@ -5,7 +5,7 @@
         Go back
       </p>
       <BuyProduct
-        :image-src="obj.image.desktop"
+        :image-src="obj.image"
         :description="obj.description"
         :title="obj.name"
         :price="obj.price"
@@ -32,19 +32,19 @@
       >
         <div class="order-2 md:order-1">
           <img
-            :src="obj.gallery.first.tablet"
+            :src="obj.gallery.first"
             alt="Image 1"
             class="w-full h-auto mb-6 rounded-lg"
           />
           <img
-            :src="obj.gallery.second.tablet"
+            :src="obj.gallery.second"
             alt="Image 2"
             class="w-full h-auto rounded-lg"
           />
         </div>
         <div class="order-1 md:order-2">
           <img
-            :src="obj.gallery.third.tablet"
+            :src="obj.gallery.third"
             alt="Image 3"
             class="w-full h-auto rounded-lg"
           />
@@ -60,11 +60,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import data from "~/data/data.json";
+import data from "~/data/data";
 const obj = data.filter((product) => product.id === 1)[0];
-console.log(obj);
-
 const goToCategory = () => {
-  this.$router.push(`/${obj.category}`);
+  (this as any).$router.push(`/${obj.category}`);
 };
 </script>
+data/data data/data

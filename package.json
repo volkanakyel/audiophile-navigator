@@ -25,9 +25,11 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@pinia/nuxt": "^0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.43.0",
+    "pinia": "^2.1.4",
     "postcss": "^8.4.24"
   }
 }
