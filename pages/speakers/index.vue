@@ -2,20 +2,24 @@
   <div class="px-7">
     <div class="bg-white max-w-6xl mx-auto">
       <ProductSection
+        v-for="(speakerItem, index) in speakersItems"
+        :key="index"
         image-position="left"
-        image-src="../../assets/images/product-zx9-speaker/desktop/image-product.jpg"
-        title="ZX9 SPEAKER"
-        description="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
-      />
-      <ProductSection
-        image-position="right"
-        image-src="../../assets/images/product-zx7-speaker/desktop/image-product.jpg"
-        title="ZX7 SPEAKER"
-        description="Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."
+        :image-src="speakerItem.image"
+        :title="speakerItem.name"
+        :description="speakerItem.description"
+        :redirect="getProductRoutes(speakerItem)"
       />
       <ItemsSection />
       <MarketingService />
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ProductDetails } from "interfaces/audioProduct";
+import data from "~/data/data";
+const speakersItems = data.filter((data) => data.category === "speakers");
+const getProductRoutes = (item: ProductDetails) => {
+  return `/${item.category}/${item.slug}`;
+};
+</script>

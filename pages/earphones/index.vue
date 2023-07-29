@@ -2,14 +2,24 @@
   <div class="px-7">
     <div class="bg-white max-w-6xl mx-auto">
       <ProductSection
+        v-for="(earphoneItem, index) in earphonesItems"
+        :key="index"
         image-position="left"
-        image-src="../../assets/images/product-yx1-earphones/desktop/image-product.jpg"
-        title="YX1 WIRELESS EARPHONES"
-        description="Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature."
+        :image-src="earphoneItem.image"
+        :title="earphoneItem.name"
+        :description="earphoneItem.description"
+        :redirect="getProductRoutes(earphoneItem)"
       />
       <ItemsSection />
       <MarketingService />
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ProductDetails } from "interfaces/audioProduct";
+import data from "~/data/data";
+const earphonesItems = data.filter((data) => data.category === "earphones");
+const getProductRoutes = (item: ProductDetails) => {
+  return `/${item.category}/${item.slug}`;
+};
+</script>

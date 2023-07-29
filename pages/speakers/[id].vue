@@ -1,7 +1,10 @@
 <template>
   <div class="px-7">
     <div class="bg-white max-w-6xl mx-auto">
-      <p class="capitalize text-grey-300 mt-20" @click="goToCategory">
+      <p
+        class="capitalize text-grey-300 mt-20 cursor-pointer"
+        @click="goToCategory"
+      >
         Go back
       </p>
       <BuyProduct
@@ -60,10 +63,18 @@
   </div>
 </template>
 <script setup lang="ts">
+import { ProductDetails } from "interfaces/audioProduct";
 import data from "~/data/data";
-const obj = data.filter((product) => product.id === 1)[0];
-const goToCategory = () => {
-  (this as any).$router.push(`/${obj.category}`);
+const { id } = useRoute().params;
+const obj: ProductDetails = data.find((product) => product.slug === id)!;
+const goToCategory = async () => {
+  try {
+    if (obj.category) {
+      await navigateTo(`/${obj?.category}`);
+    }
+  } catch (error) {
+    throw createError({ statusCode: 404, statusMessage: "Product not found" });
+  }
 };
 </script>
 data/data data/data
