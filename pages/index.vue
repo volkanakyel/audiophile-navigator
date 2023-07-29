@@ -7,8 +7,13 @@
       <div
         class="mt-20 py-28 pl-10 bg-left bg-no-repeat bg-[url('./assets/images/home/mobile/image-speaker-zx7.jpg')] md:bg-no-repeat md:bg-[url('./assets/images/home/tablet/image-speaker-zx7.jpg')] bg-cover rounded-lg"
       >
-        <p class="text-l mb-8">ZX7 SPEAKER</p>
-        <button class="bg-black text-white p-4 uppercase">See Product</button>
+        <p class="text-l mb-8 uppercase">{{ speakerItem.name }}</p>
+        <button
+          class="bg-black text-white p-4 uppercase"
+          @click="redirectToProduct(speakerItem.category, speakerItem.slug)"
+        >
+          See Product
+        </button>
       </div>
       <div
         class="mt-20 flex justify-center gap-8 items-center flex-col md:flex-row"
@@ -26,12 +31,29 @@
         <div
           class="w-full bg-grey-100 flex flex-col items-start justify-center p-10 rounded-lg md:w-1/2 md:p-14"
         >
-          <p class="text-l mb-8">YX1 EARPHONES</p>
-          <button class="bg-black text-white p-4 uppercase">See Product</button>
+          <p class="text-l mb-8 uppercase">{{ earphoneItem.slug }}</p>
+          <button
+            class="bg-black text-white p-4 uppercase"
+            @click="redirectToProduct(earphoneItem.category, earphoneItem.slug)"
+          >
+            See Product
+          </button>
         </div>
       </div>
       <MarketingService />
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ProductDetails } from "interfaces/audioProduct";
+import data from "~/data/data";
+const speakerItem: ProductDetails = data.find(
+  (speaker) => speaker.slug === "zx7-speaker"
+)!;
+const earphoneItem: ProductDetails = data.find(
+  (speaker) => speaker.slug === "yx1-earphones"
+)!;
+const redirectToProduct = async (category: string, slug: string) => {
+  await navigateTo(`/${category}/${slug}`);
+};
+</script>

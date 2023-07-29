@@ -15,10 +15,19 @@
         Upgrade to premium speakers that are phenomenally built to deliver truly
         remarkable sound.
       </p>
-      <button class="bg-black text-white p-4 uppercase my-8 md:mb-0">
+      <button
+        class="bg-black text-white p-4 uppercase my-8 md:mb-0"
+        @click="redirectToProduct"
+      >
         See Product
       </button>
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import data from "~/data/data";
+const speakerItem = data.find((speaker) => speaker.slug === "zx9-speaker")!;
+const redirectToProduct = async () => {
+  await navigateTo(`/${speakerItem.category}/${speakerItem.slug}`);
+};
+</script>
