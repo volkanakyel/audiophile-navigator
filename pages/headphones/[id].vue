@@ -63,12 +63,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import { ProductDetails } from "interfaces/audioProduct";
 import data from "~/data/data";
 const { id } = useRoute().params;
-console.log(id);
-const obj = data.find((product) => product.id.toString() === id);
-console.log(obj);
-console.log(`/${obj.category}`);
+const obj: ProductDetails = data.find((product) => product.slug === id)!;
 const goToCategory = async () => {
   try {
     if (obj.category) {

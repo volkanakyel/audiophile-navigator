@@ -24,7 +24,10 @@
       <p class="text-center md:text-left">
         {{ description }}
       </p>
-      <button class="uppercase bg-orange p-3 my-4 text-white">
+      <button
+        class="uppercase bg-orange p-3 my-4 text-white"
+        @click="goToProduct"
+      >
         See Product
       </button>
     </div>
@@ -38,12 +41,19 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   title: string;
   description: string;
   imageSrc: string;
+  redirect?: string;
   imagePosition?: "left" | "right";
 }>();
+const goToProduct = async () => {
+  console.log(props.redirect);
+  await nextTick(() => {
+    navigateTo(`${props.redirect}`, { replace: true });
+  });
+};
 </script>
 
 <style scoped></style>
