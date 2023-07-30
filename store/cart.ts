@@ -11,11 +11,21 @@ export const useFiltersStore = defineStore({
     return {
       cartItems: {} as cartItem,
       productItems: productList as ProductDetails[],
+      cartPanelOpen: false,
     };
+  },
+  getters: {
+    getCartState: (state) => state.cartPanelOpen,
   },
   actions: {
     addItemToCart(value: ProductItem) {
       this.cartItems.items.push(value);
+    },
+    openCartPanel() {
+      this.cartPanelOpen = true;
+    },
+    closeCartPanel() {
+      this.cartPanelOpen = false;
     },
   },
 });
