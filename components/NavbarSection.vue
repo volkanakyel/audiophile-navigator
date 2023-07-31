@@ -46,4 +46,8 @@ const onClickOutsideHandler = () => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.cart-open {
+  display: block;
+}
+</style>
