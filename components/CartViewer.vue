@@ -1,7 +1,7 @@
 <template>
   <div class="w-96 bg-white text-black rounded-lg p-8">
     <div class="flex justify-between mb-8">
-      <p class="uppercase">Cart (3)</p>
+      <p class="uppercase">Cart {{ store.getCartItemsLength }}</p>
       <p class="uppercase">Remove All</p>
     </div>
     <CartItem is-summary-section="true" class="mb-6" />
@@ -17,6 +17,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useFiltersStore } from "~/store/cart";
+const store = useFiltersStore();
+</script>
 
 <style scoped></style>

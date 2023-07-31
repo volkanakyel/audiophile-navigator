@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-import productList from "data/data";
 import {
   ProductDetails,
   cartItem,
@@ -10,12 +9,13 @@ export const useFiltersStore = defineStore({
   state: () => {
     return {
       cartItems: {} as cartItem,
-      productItems: productList as ProductDetails[],
+      productItems: [] as ProductDetails[],
       cartPanelOpen: false,
     };
   },
   getters: {
     getCartState: (state) => state.cartPanelOpen,
+    getCartItemsLength: (state) => state.productItems.length,
   },
   actions: {
     addItemToCart(value: ProductItem) {
