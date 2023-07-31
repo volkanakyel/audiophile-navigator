@@ -8,7 +8,7 @@ export const useFiltersStore = defineStore({
   id: "cart",
   state: () => {
     return {
-      cartItems: {} as cartItem,
+      cartItems: [] as ProductItem[],
       productItems: [] as ProductDetails[],
       cartPanelOpen: false,
     };
@@ -19,7 +19,7 @@ export const useFiltersStore = defineStore({
   },
   actions: {
     addItemToCart(value: ProductItem) {
-      this.cartItems.items.push(value);
+      this.cartItems.push(value);
     },
     openCartPanel() {
       this.cartPanelOpen = true;
@@ -29,3 +29,7 @@ export const useFiltersStore = defineStore({
     },
   },
 });
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useFiltersStore, import.meta.hot));
+}

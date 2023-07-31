@@ -1,7 +1,7 @@
 <template>
   <div class="w-96 bg-white text-black rounded-lg p-8">
     <div class="flex justify-between mb-8">
-      <p class="uppercase">Cart 6</p>
+      <p class="uppercase">Cart</p>
       <p class="uppercase">Remove All</p>
     </div>
     <CartItem is-summary-section="true" class="mb-6" />

@@ -9,8 +9,8 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "@vueuse/nuxt",
     [
-      "@vueuse/nuxt",
       "@pinia/nuxt",
       {
         autoImports: ["defineStore", "acceptHMRUpdate"],

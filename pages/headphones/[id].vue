@@ -12,6 +12,7 @@
         :description="obj.description"
         :title="obj.name"
         :price="obj.price"
+        @productCta="addItemToCart(obj)"
       />
       <div
         class="flex justify-between items-center flex-col gap-20 mt-20 md:flex-row"
@@ -63,8 +64,18 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ProductDetails } from "interfaces/audioProduct";
+import { ProductDetails, ProductItem } from "interfaces/audioProduct";
 import data from "~/data/data";
+import { useFiltersStore } from "~/store/cart";
+const filterStore = useFiltersStore();
+const addItemToCart = (product: ProductDetails) => {
+  const productItem: ProductItem = {
+    name: product.name,
+    price: product.price,
+    quantity: 1,
+  };
+  filterStore.addItemToCart(productItem);
+};
 const { id } = useRoute().params;
 const obj: ProductDetails = data.find((product) => product.slug === id)!;
 const goToCategory = async () => {

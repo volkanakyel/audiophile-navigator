@@ -14,7 +14,10 @@
       </p>
       <p class="text-m mt-8">$ {{ price }}</p>
       <div class="mt-10">
-        <button class="uppercase bg-orange p-3 my-4 text-white">
+        <button
+          class="uppercase bg-orange p-3 my-4 text-white"
+          @click="productCta"
+        >
           Add to cart
         </button>
       </div>
@@ -29,6 +32,12 @@ defineProps<{
   price: number;
   imageSrc: string;
 }>();
+
+const emit = defineEmits(["productCta"]);
+
+const productCta = () => {
+  emit("productCta");
+};
 </script>
 
 <style scoped></style>
