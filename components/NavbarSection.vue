@@ -27,8 +27,9 @@
           @click="toggleCard"
         />
         <CartViewer
-          :class="{ 'cart-open': cartOpen }"
-          class="absolute hidden right-0 top-20"
+          v-if="cartOpen"
+          v-on-click-outside="onClickOutsideHandler"
+          class="absolute right-0 top-20"
         />
       </div>
     </div>
@@ -37,9 +38,13 @@
 
 <script setup>
 import { ref } from "vue";
+import { vOnClickOutside } from "@vueuse/components";
 const cartOpen = ref(false);
 const toggleCard = () => {
-  cartOpen.value = !cartOpen.value;
+  cartOpen.value = true;
+};
+const onClickOutsideHandler = () => {
+  cartOpen.value = false;
 };
 </script>
 
