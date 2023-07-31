@@ -24,10 +24,10 @@
           src="../assets/images/shared/desktop/icon-cart.svg"
           alt="cart"
           class="hover:fill-orange"
-          @click="toggleCard"
+          @click="openCart"
         />
         <CartViewer
-          v-if="cartOpen"
+          v-if="filterStore.getCartState"
           v-on-click-outside="onClickOutsideHandler"
           class="absolute right-0 top-20"
         />
@@ -37,19 +37,13 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { vOnClickOutside } from "@vueuse/components";
-const cartOpen = ref(false);
-const toggleCard = () => {
-  cartOpen.value = true;
-};
+import { useFiltersStore } from "~/store/cart";
+const filterStore = useFiltersStore();
+const openCart = () => filterStore.openCartPanel();
 const onClickOutsideHandler = () => {
-  cartOpen.value = false;
+  filterStore.closeCartPanel();
 };
 </script>
 
-<style scoped>
-.cart-open {
-  display: block;
-}
-</style>
+<style scoped></style>

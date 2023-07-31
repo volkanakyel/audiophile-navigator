@@ -1,9 +1,5 @@
 import { defineStore } from "pinia";
-import {
-  ProductDetails,
-  cartItem,
-  ProductItem,
-} from "~/interfaces/audioProduct";
+import { ProductDetails, ProductItem } from "~/interfaces/audioProduct";
 export const useFiltersStore = defineStore({
   id: "cart",
   state: () => {
