@@ -29,7 +29,7 @@
 <script setup>
 defineProps({
   isSummarySection: {
-    type: String,
+    type: Boolean,
     required: false,
     default: false,
   },

@@ -12,7 +12,7 @@
         :description="obj.description"
         :title="obj.name"
         :price="obj.price"
-        @productCta="addItemToCart(obj)"
+        @product-cta="addItemToCart(obj)"
       />
       <div
         class="flex justify-between items-center flex-col gap-20 mt-20 md:flex-row"
@@ -74,6 +74,7 @@ const addItemToCart = (product: ProductDetails) => {
     price: product.price,
     quantity: 1,
   };
+  filterStore.openCartPanel();
   filterStore.addItemToCart(productItem);
 };
 const { id } = useRoute().params;

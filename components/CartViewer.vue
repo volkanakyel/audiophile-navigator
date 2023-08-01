@@ -2,11 +2,11 @@
   <div class="w-96 bg-white text-black rounded-lg p-8">
     <div class="flex justify-between mb-8">
       <p class="uppercase">Cart {{ store.getCartItemsLength }}</p>
-      <p class="uppercase">Remove All</p>
+      <p class="uppercase cursor-pointer" @click="clearCart">Remove All</p>
     </div>
-    <CartItem is-summary-section="true" class="mb-6" />
-    <CartItem is-summary-section="true" class="mb-6" />
-    <CartItem is-summary-section="true" class="mb-6" />
+    <CartItem is-summary-section class="mb-6" />
+    <CartItem is-summary-section class="mb-6" />
+    <CartItem is-summary-section class="mb-6" />
     <div class="flex justify-between mb-8">
       <p class="uppercase">Total</p>
       <p class="uppercase">$ 5,396</p>
@@ -20,6 +20,7 @@
 <script setup>
 import { useFiltersStore } from "~/store/cart";
 const store = useFiltersStore();
+const clearCart = () => store.clearCartContent();
 </script>
 
 <style scoped></style>

@@ -11,7 +11,7 @@ export const useFiltersStore = defineStore({
   },
   getters: {
     getCartState: (state) => state.cartPanelOpen,
-    getCartItemsLength: (state) => state.productItems.length,
+    getCartItemsLength: (state) => state.cartItems.length,
   },
   actions: {
     addItemToCart(value: ProductItem) {
@@ -22,6 +22,9 @@ export const useFiltersStore = defineStore({
     },
     closeCartPanel() {
       this.cartPanelOpen = false;
+    },
+    clearCartContent() {
+      this.cartItems.length = 0;
     },
   },
 });
