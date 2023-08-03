@@ -12,6 +12,8 @@ export const useFiltersStore = defineStore({
   getters: {
     getCartState: (state) => state.cartPanelOpen,
     getCartItems: (state) => state.cartItems,
+    getTotalPrice: (state) =>
+      state.cartItems.reduce((sum, product) => sum + product.price, 0),
   },
   actions: {
     addItemToCart(value: ProductItem) {

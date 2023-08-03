@@ -13,7 +13,7 @@
     />
     <div class="flex justify-between mb-8">
       <p class="uppercase">Total</p>
-      <p class="uppercase">$ 5,396</p>
+      <p class="uppercase">$ {{ totalPrice }}</p>
     </div>
     <button class="uppercase w-full bg-orange p-3 text-white">
       <nuxt-link to="/checkout">Checkout</nuxt-link>
@@ -25,6 +25,7 @@
 import { useFiltersStore } from "~/store/cart";
 const store = useFiltersStore();
 const cartItems = store.getCartItems;
+const totalPrice = store.getTotalPrice;
 const clearCart = () => store.clearCartContent();
 </script>
 
