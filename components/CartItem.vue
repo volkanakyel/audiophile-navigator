@@ -10,8 +10,8 @@
           class="rounded-lg"
         />
         <div>
-          <p>XX99 MK II</p>
-          <p>$ 2,999</p>
+          <p>{{ product.name }}</p>
+          <p>$ {{ product.price }}</p>
         </div>
       </div>
       <div v-if="isSummarySection" class="flex gap-2 bg-grey-100 py-2 px-3">
@@ -20,25 +20,19 @@
         <p>+</p>
       </div>
       <div v-else>
-        <p>x{{ itemQuantity }}</p>
+        <p>x{{ product.quantity }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-defineProps({
-  isSummarySection: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
-  itemQuantity: {
-    type: Number,
-    required: false,
-    default: 1,
-  },
-});
+<script setup lang="ts">
+import { ProductItem } from "~/interfaces/audioProduct";
+defineProps<{
+  itemQuantity?: Number;
+  isSummarySection?: boolean;
+  product: ProductItem;
+}>();
 </script>
 
 <style scoped></style>

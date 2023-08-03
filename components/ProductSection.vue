@@ -49,7 +49,6 @@ const props = defineProps<{
   imagePosition?: "left" | "right";
 }>();
 const goToProduct = async () => {
-  console.log(props.redirect);
   await nextTick(() => {
     navigateTo(`${props.redirect}`, { replace: true });
   });
