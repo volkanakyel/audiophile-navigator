@@ -13,11 +13,15 @@ export const useFiltersStore = defineStore({
     getCartState: (state) => state.cartPanelOpen,
     getCartItems: (state) => state.cartItems,
     getTotalPrice: (state) =>
-      state.cartItems.reduce((sum, product) => sum + product.price, 0),
+      state.cartItems.reduce(
+        (sum, product) => sum + product.price * product.quantity,
+        0
+      ),
   },
   actions: {
     addItemToCart(value: ProductItem) {
-      this.cartItems.push(value);
+      const itemAdded = this.cartItems.find((item) => item.name === value.name);
+      itemAdded ? itemAdded.quantity++ : this.cartItems.push(value);
     },
     openCartPanel() {
       this.cartPanelOpen = true;
