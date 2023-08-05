@@ -4,7 +4,7 @@
   >
     <img
       class="absolute left-1/2 top-0 w-20 -translate-x-1/2 -translate-y-1/2"
-      src="../assets/images/shared/desktop/image-category-thumbnail-headphones.png"
+      :src="itemProduct.image"
       alt=""
     />
     <p>HEADPHONES</p>
@@ -12,6 +12,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+import { SiblingsProduct } from "~/interfaces/audioProduct";
+defineProps<{
+  itemProduct: SiblingsProduct;
+}>();
+</script>
 
 <style scoped></style>

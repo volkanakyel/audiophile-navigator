@@ -46,4 +46,4 @@ interface cartItem {
   totalPrice: number;
 }
 
-export { ProductDetails, cartItem, ProductItem };
+export { ProductDetails, cartItem, ProductItem, SiblingsProduct };
