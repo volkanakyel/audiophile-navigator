@@ -15,9 +15,9 @@
         </div>
       </div>
       <div v-if="isSummarySection" class="flex gap-2 bg-grey-100 py-2 px-3">
-        <p>-</p>
+        <p @click="removeQuantity(product)">-</p>
         <p>{{ product.quantity }}</p>
-        <p>+</p>
+        <p @click="addQuantity(product)">+</p>
       </div>
       <div v-else>
         <p>x{{ product.quantity }}</p>
@@ -27,7 +27,12 @@
 </template>
 
 <script setup lang="ts">
+import { useFiltersStore } from "~/store/cart";
 import { ProductItem } from "~/interfaces/audioProduct";
+const store = useFiltersStore();
+const addQuantity = (product: ProductItem) => store.addQuantityToItem(product);
+const removeQuantity = (product: ProductItem) =>
+  store.removeQuantityToItem(product);
 defineProps<{
   itemQuantity?: Number;
   isSummarySection?: boolean;

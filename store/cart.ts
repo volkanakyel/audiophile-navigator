@@ -23,6 +23,16 @@ export const useFiltersStore = defineStore({
       const itemAdded = this.cartItems.find((item) => item.name === value.name);
       itemAdded ? itemAdded.quantity++ : this.cartItems.push(value);
     },
+    addQuantityToItem(value: ProductItem) {
+      const itemAdded = this.cartItems.find((item) => item.name === value.name);
+      itemAdded ? itemAdded.quantity++ : this.cartItems.push(value);
+    },
+    removeQuantityToItem(value: ProductItem) {
+      const itemAdded = this.cartItems.find((item) => item.name === value.name);
+      itemAdded && itemAdded.quantity >= 1
+        ? itemAdded.quantity--
+        : this.cartItems.push(value);
+    },
     openCartPanel() {
       this.cartPanelOpen = true;
     },
