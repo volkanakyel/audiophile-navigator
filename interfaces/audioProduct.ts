@@ -29,6 +29,7 @@ interface ProductDetails {
   includes: IncludedItem[];
   gallery: ImageGallery;
   others: SiblingsProduct[];
+  relatedCategories: SiblingsProduct[];
 }
 
 interface ProductItem {
