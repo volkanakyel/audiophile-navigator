@@ -73,6 +73,7 @@ const addItemToCart = (product: ProductDetails) => {
     name: product.name,
     price: product.price,
     quantity: 1,
+    image: product.image,
   };
   filterStore.openCartPanel();
   filterStore.addItemToCart(productItem);

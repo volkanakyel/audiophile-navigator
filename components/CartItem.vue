@@ -3,7 +3,7 @@
     <div class="flex justify-between items-center">
       <div class="flex gap-4 items-center">
         <img
-          src="../assets/images/cart/image-xx59-headphones.jpg"
+          :src="product.image"
           width="64"
           height="64"
           alt="product"

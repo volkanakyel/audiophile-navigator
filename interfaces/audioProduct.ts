@@ -32,6 +32,7 @@ interface ProductDetails {
 }
 
 interface ProductItem {
+  image?: string;
   name: string;
   price: number;
   quantity: number;
