@@ -15,7 +15,10 @@
       <p class="uppercase">Total</p>
       <p class="uppercase">$ {{ totalPrice }}</p>
     </div>
-    <button class="uppercase w-full bg-orange p-3 text-white">
+    <button
+      :disabled="cartItems.length === 0"
+      class="uppercase w-full bg-orange p-3 text-white"
+    >
       <nuxt-link to="/checkout">Checkout</nuxt-link>
     </button>
   </div>

@@ -108,9 +108,12 @@
         </div>
         <div class="bg-white max-w-sm p-8 w-96 rounded-lg">
           <h2 class="uppercase text-m mb-6">Summary</h2>
-          <CartItem class="mb-6" />
-          <CartItem class="mb-6" />
-          <CartItem class="mb-6" />
+          <CartItem
+            v-for="(product, index) in cartItems"
+            :key="index"
+            class="mb-6"
+            :product="product"
+          />
           <div class="flex justify-between mb-4">
             <p class="uppercase">Total</p>
             <p class="uppercase">$ 5,396</p>
@@ -135,4 +138,8 @@
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useFiltersStore } from "~/store/cart";
+const store = useFiltersStore();
+const cartItems = store.getCartItems;
+</script>
