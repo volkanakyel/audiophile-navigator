@@ -7,7 +7,9 @@
           class="md:hidden mr-3"
           alt=""
         />
-        <img src="../assets/images/shared/desktop/logo.svg" alt="" />
+        <nuxt-link to="/">
+          <img src="../assets/images/shared/desktop/logo.svg" alt="" />
+        </nuxt-link>
         <nav class="hidden md:flex md:justify-center md:gap-8 md:uppercase">
           <nuxt-link to="/" class="hover:text-orange">Home</nuxt-link>
           <nuxt-link to="/headphones" class="hover:text-orange"
