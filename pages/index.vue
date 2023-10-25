@@ -5,7 +5,7 @@
       <ItemsSection :item-related="headphoneItems.relatedCategories" />
       <SpeakerSection />
       <div
-        class="mt-20 py-28 pl-10 bg-left bg-no-repeat bg-[url('./assets/images/home/mobile/image-speaker-zx7.jpg')] md:bg-no-repeat md:bg-[url('/images/home/tablet/image-speaker-zx7.jpg')] bg-cover rounded-lg"
+        class="mt-20 py-28 pl-10 bg-left bg-no-repeat bg-[url('/images/home/mobile/image-speaker-zx7.jpg')] md:bg-no-repeat md:bg-[url('/images/home/tablet/image-speaker-zx7.jpg')] bg-cover rounded-lg"
       >
         <p class="text-l mb-8 uppercase">{{ speakerItem.name }}</p>
         <button
