@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[url('../images/home/mobile/image-header.jpg')] md:bg-[url('../images/home/desktop/image-hero.jpg')] bg-cover bg-center"
+    class="bg-[url('../images/home/mobile/image-header.jpg')] md:bg-[url('/images/home/desktop/image-hero.jpg')] bg-cover bg-center"
   >
     <div class="max-w-6xl mx-auto">
       <hr class="separator" />

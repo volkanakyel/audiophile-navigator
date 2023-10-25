@@ -5,7 +5,7 @@
       <ItemsSection :item-related="speakerItem.others" />
       <SpeakerSection />
       <div
-        class="mt-20 py-28 pl-10 bg-left bg-no-repeat bg-[url('./assets/images/home/mobile/image-speaker-zx7.jpg')] md:bg-no-repeat md:bg-[url('./assets/images/home/tablet/image-speaker-zx7.jpg')] bg-cover rounded-lg"
+        class="mt-20 py-28 pl-10 bg-left bg-no-repeat bg-[url('./assets/images/home/mobile/image-speaker-zx7.jpg')] md:bg-no-repeat md:bg-[url('/images/home/tablet/image-speaker-zx7.jpg')] bg-cover rounded-lg"
       >
         <p class="text-l mb-8 uppercase">{{ speakerItem.name }}</p>
         <button
@@ -20,12 +20,12 @@
       >
         <img
           class="rounded-lg hidden md:block w-1/2"
-          src="../assets/images/product-yx1-earphones/desktop/image-gallery-2.jpg"
+          src="/images/product-yx1-earphones/desktop/image-gallery-2.jpg"
           alt=""
         />
         <img
           class="w-full rounded-lg md:hidden"
-          src="../assets/images/product-yx1-earphones/mobile/image-gallery-2.jpg"
+          src="/images/product-yx1-earphones/mobile/image-gallery-2.jpg"
           alt=""
         />
         <div

@@ -4,7 +4,7 @@
   >
     <img
       class="w-full rounded-lg max-w-2xl md:w-1/2 md:hidden"
-      src="../assets/images/shared/tablet/image-best-gear.jpg"
+      src="/images/shared/tablet/image-best-gear.jpg"
       alt=""
     />
     <div class="w-full p-6 md:w-1/2 md:p-0">
@@ -22,7 +22,7 @@
     </div>
     <img
       class="w-full rounded-lg max-w-2xl md:w-1/2 hidden md:block"
-      src="../assets/images/shared/desktop/image-best-gear.jpg"
+      src="/images/shared/desktop/image-best-gear.jpg"
       alt=""
     />
   </div>

@@ -3,12 +3,12 @@
     <div class="max-w-screen-xl mx-auto p-8">
       <div class="flex justify-between text-white relative">
         <img
-          src="../assets/images/shared/tablet/icon-hamburger.svg"
+          src="/images/shared/tablet/icon-hamburger.svg"
           class="md:hidden mr-3"
           alt=""
         />
         <nuxt-link to="/">
-          <img src="../assets/images/shared/desktop/logo.svg" alt="" />
+          <img src="/images/shared/desktop/logo.svg" alt="" />
         </nuxt-link>
         <nav class="hidden md:flex md:justify-center md:gap-8 md:uppercase">
           <nuxt-link to="/" class="hover:text-orange">Home</nuxt-link>
@@ -23,7 +23,7 @@
           >
         </nav>
         <img
-          src="../assets/images/shared/desktop/icon-cart.svg"
+          src="/images/shared/desktop/icon-cart.svg"
           alt="cart"
           class="hover:fill-orange"
           @click="openCart"

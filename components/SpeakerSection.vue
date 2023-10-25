@@ -4,7 +4,7 @@
   >
     <img
       class="max-w-sm w-full md:max-w-md md:w-1/2"
-      src="../assets/images/home/desktop/image-speaker-zx9.png"
+      src="/images/home/desktop/image-speaker-zx9.png"
       alt=""
     />
     <div

@@ -5,7 +5,7 @@
         <nav
           class="flex flex-col items-center md:justify-start gap-5 uppercase mt-4 sm:flex-row md:mt-0"
         >
-          <img src="../assets/images/shared/desktop/logo.svg" alt="" />
+          <img src="/images/shared/desktop/logo.svg" alt="" />
           <nuxt-link to="/" class="hover:text-orange">Home</nuxt-link>
           <nuxt-link to="/headphones" class="hover:text-orange"
             >Headphones</nuxt-link
@@ -33,19 +33,19 @@
         <div
           class="flex flex-row items-center justify-center mt-10 gap-4 md:hidden"
         >
-          <img src="../assets/images/shared/desktop/icon-facebook.svg" alt="" />
-          <img src="../assets/images/shared/desktop/icon-twitter.svg" alt="" />
+          <img src="/images/shared/desktop/icon-facebook.svg" alt="" />
+          <img src="/images/shared/desktop/icon-twitter.svg" alt="" />
           <img
-            src="../assets/images/shared/desktop/icon-instagram.svg"
+            src="/images/shared/desktop/icon-instagram.svg"
             alt=""
           />
         </div>
 
         <div class="hidden md:flex md:gap-4 text-center">
-          <img src="../assets/images/shared/desktop/icon-facebook.svg" alt="" />
-          <img src="../assets/images/shared/desktop/icon-twitter.svg" alt="" />
+          <img src="/images/shared/desktop/icon-facebook.svg" alt="" />
+          <img src="/images/shared/desktop/icon-twitter.svg" alt="" />
           <img
-            src="../assets/images/shared/desktop/icon-instagram.svg"
+            src="/images/shared/desktop/icon-instagram.svg"
             alt=""
           />
         </div>
