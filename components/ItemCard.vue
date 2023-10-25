@@ -7,8 +7,13 @@
       :src="itemProduct.image"
       alt=""
     />
-    <p>HEADPHONES</p>
-    <p>Shop</p>
+    <p class="uppercase">{{ itemProduct.name }}</p>
+    <p
+      class="cursor-pointer"
+      @click="redirectToProduct(itemProduct.name, itemProduct.slug)"
+    >
+      Shop
+    </p>
   </div>
 </template>
 
@@ -17,6 +22,9 @@ import { SiblingsProduct } from "~/interfaces/audioProduct";
 defineProps<{
   itemProduct: SiblingsProduct;
 }>();
+const redirectToProduct = async (category: string, slug: string) => {
+  await navigateTo(`/${category.toLocaleLowerCase()}/${slug}`);
+};
 </script>
 
 <style scoped></style>

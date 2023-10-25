@@ -12,7 +12,7 @@
           :redirect="getProductRoutes(headphoneItem)"
         />
       </Suspense>
-      <ItemsSection :item-related="headphonesItems[0].others" />
+      <ItemsSection :item-related="headphonesItems[0].relatedCategories" />
       <MarketingService />
     </div>
   </div>

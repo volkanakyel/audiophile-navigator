@@ -56,7 +56,7 @@
       </div>
       <div>
         <h2 class="uppercase text-center mt-20 text-l">You may also like</h2>
-        <ItemsSection :item-related="obj.others" />
+        <ItemsSection :item-related="obj.relatedCategories" />
       </div>
 
       <MarketingService />

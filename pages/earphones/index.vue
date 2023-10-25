@@ -10,7 +10,7 @@
         :description="earphoneItem.description"
         :redirect="getProductRoutes(earphoneItem)"
       />
-      <ItemsSection :item-related="earphonesItems[0].others" />
+      <ItemsSection :item-related="earphonesItems[0].relatedCategories" />
       <MarketingService />
     </div>
   </div>

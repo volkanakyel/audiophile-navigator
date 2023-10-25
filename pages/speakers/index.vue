@@ -10,7 +10,7 @@
         :description="speakerItem.description"
         :redirect="getProductRoutes(speakerItem)"
       />
-      <ItemsSection :item-related="speakersItems[0].others" />
+      <ItemsSection :item-related="speakersItems[0].relatedCategories" />
       <MarketingService />
     </div>
   </div>

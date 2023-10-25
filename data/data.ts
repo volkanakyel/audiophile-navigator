@@ -38,19 +38,15 @@ const productList: ProductDetails[] = [
       },
     ],
     gallery: {
-      first:
-        "/images/product-yx1-earphones/tablet/image-gallery-1.jpg",
-      second:
-        "/images/product-yx1-earphones/tablet/image-gallery-2.jpg",
-      third:
-        "/images/product-yx1-earphones/tablet/image-gallery-3.jpg",
+      first: "/images/product-yx1-earphones/tablet/image-gallery-1.jpg",
+      second: "/images/product-yx1-earphones/tablet/image-gallery-2.jpg",
+      third: "/images/product-yx1-earphones/tablet/image-gallery-3.jpg",
     },
     others: [
       {
         slug: "xx99-mark-one-headphones",
         name: "XX99 Mark I",
-        image:
-          "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
+        image: "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
       },
       {
         slug: "xx59-headphones",
@@ -67,20 +63,17 @@ const productList: ProductDetails[] = [
       {
         name: "Headphones",
         slug: "xx99-mark-one-headphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-headphones.png",
       },
       {
-        name: "Speaker",
+        name: "Speakers",
         slug: "zx9-speaker",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        image: "/images/shared/desktop/image-category-thumbnail-speakers.png",
       },
       {
         name: "Earphones",
         slug: "yx1-earphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-earphones.png",
       },
     ],
   },
@@ -117,25 +110,20 @@ const productList: ProductDetails[] = [
       },
     ],
     gallery: {
-      first:
-        "/images/product-xx59-headphones/tablet/image-gallery-1.jpg",
-      second:
-        "/images/product-xx59-headphones/tablet/image-gallery-2.jpg",
-      third:
-        "/images/product-xx59-headphones/tablet/image-gallery-3.jpg",
+      first: "/images/product-xx59-headphones/tablet/image-gallery-1.jpg",
+      second: "/images/product-xx59-headphones/tablet/image-gallery-2.jpg",
+      third: "/images/product-xx59-headphones/tablet/image-gallery-3.jpg",
     },
     others: [
       {
         slug: "xx99-mark-two-headphones",
         name: "XX99 Mark II",
-        image:
-          "/images/shared/desktop/image-xx99-mark-two-headphones.jpg",
+        image: "/images/shared/desktop/image-xx99-mark-two-headphones.jpg",
       },
       {
         slug: "xx99-mark-one-headphones",
         name: "XX99 Mark I",
-        image:
-          "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
+        image: "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
       },
       {
         slug: "zx9-speaker",
@@ -147,20 +135,17 @@ const productList: ProductDetails[] = [
       {
         name: "Headphones",
         slug: "xx99-mark-one-headphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-headphones.png",
       },
       {
-        name: "Speaker",
+        name: "Speakers",
         slug: "zx9-speaker",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        image: "/images/shared/desktop/image-category-thumbnail-speakers.png",
       },
       {
         name: "Earphones",
         slug: "yx1-earphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-earphones.png",
       },
     ],
   },
@@ -168,8 +153,7 @@ const productList: ProductDetails[] = [
     id: 3,
     slug: "xx99-mark-one-headphones",
     name: "XX99 Mark I Headphones",
-    image:
-      "/images/product-xx99-mark-one-headphones/desktop/image-product.jpg",
+    image: "/images/product-xx99-mark-one-headphones/desktop/image-product.jpg",
     category: "headphones",
     categoryImage:
       "/images/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg",
@@ -209,8 +193,7 @@ const productList: ProductDetails[] = [
       {
         slug: "xx99-mark-two-headphones",
         name: "XX99 Mark II",
-        image:
-          "/images/shared/desktop/image-xx99-mark-two-headphones.jpg",
+        image: "/images/shared/desktop/image-xx99-mark-two-headphones.jpg",
       },
       {
         slug: "xx59-headphones",
@@ -227,20 +210,17 @@ const productList: ProductDetails[] = [
       {
         name: "Headphones",
         slug: "xx99-mark-one-headphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-headphones.png",
       },
       {
         name: "Speaker",
         slug: "zx9-speaker",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        image: "/images/shared/desktop/image-category-thumbnail-speakers.png",
       },
       {
         name: "Earphones",
         slug: "yx1-earphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-earphones.png",
       },
     ],
   },
@@ -248,8 +228,7 @@ const productList: ProductDetails[] = [
     id: 4,
     slug: "xx99-mark-two-headphones",
     name: "XX99 Mark II Headphones",
-    image:
-      "/images/product-xx99-mark-two-headphones/desktop/image-product.jpg",
+    image: "/images/product-xx99-mark-two-headphones/desktop/image-product.jpg",
     category: "headphones",
     categoryImage:
       "/images/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg",
@@ -293,8 +272,7 @@ const productList: ProductDetails[] = [
       {
         slug: "xx99-mark-one-headphones",
         name: "XX99 Mark I",
-        image:
-          "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
+        image: "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
       },
       {
         slug: "xx59-headphones",
@@ -311,20 +289,17 @@ const productList: ProductDetails[] = [
       {
         name: "Headphones",
         slug: "xx99-mark-one-headphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-headphones.png",
       },
       {
-        name: "Speaker",
+        name: "Speakers",
         slug: "zx9-speaker",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        image: "/images/shared/desktop/image-category-thumbnail-speakers.png",
       },
       {
         name: "Earphones",
         slug: "yx1-earphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-earphones.png",
       },
     ],
   },
@@ -379,8 +354,7 @@ const productList: ProductDetails[] = [
       {
         slug: "xx99-mark-one-headphones",
         name: "XX99 Mark I",
-        image:
-          "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
+        image: "/images/shared/desktop/image-xx99-mark-one-headphones.jpg",
       },
       {
         slug: "xx59-headphones",
@@ -392,20 +366,17 @@ const productList: ProductDetails[] = [
       {
         name: "Headphones",
         slug: "xx99-mark-one-headphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-headphones.png",
       },
       {
-        name: "Speaker",
+        name: "Speakers",
         slug: "zx9-speaker",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        image: "/images/shared/desktop/image-category-thumbnail-speakers.png",
       },
       {
         name: "Earphones",
         slug: "yx1-earphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-earphones.png",
       },
     ],
   },
@@ -459,8 +430,7 @@ const productList: ProductDetails[] = [
       {
         slug: "xx99-mark-one-headphones",
         name: "XX99 Mark I",
-        image:
-          "/images/shared/tablet/image-xx99-mark-one-headphones.jpg",
+        image: "/images/shared/tablet/image-xx99-mark-one-headphones.jpg",
       },
       {
         slug: "xx59-headphones",
@@ -472,20 +442,17 @@ const productList: ProductDetails[] = [
       {
         name: "Headphones",
         slug: "xx99-mark-one-headphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-headphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-headphones.png",
       },
       {
-        name: "Speaker",
+        name: "Speakers",
         slug: "zx9-speaker",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-speakers.png",
+        image: "/images/shared/desktop/image-category-thumbnail-speakers.png",
       },
       {
         name: "Earphones",
         slug: "yx1-earphones",
-        image:
-          "/images/shared/desktop/image-category-thumbnail-earphones.png",
+        image: "/images/shared/desktop/image-category-thumbnail-earphones.png",
       },
     ],
   },
