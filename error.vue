@@ -7,7 +7,9 @@
 </template>
 
 <script setup>
-defineProps(["error"]);
+defineProps < {
+  error: Error
+} > ();
 </script>
 
 <style lang="scss" scoped></style>
