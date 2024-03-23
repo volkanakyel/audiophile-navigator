@@ -7,9 +7,7 @@
 </template>
 
 <script setup>
-defineProps < {
-  error: Error
-} > ();
+defineProps({
+  error: Object
+});
 </script>
-
-<style lang="scss" scoped></style>
