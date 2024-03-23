@@ -1,15 +1,9 @@
 <template>
   <div class="px-7">
     <div class="bg-white max-w-6xl mx-auto">
-      <ProductSection
-        v-for="(speakerItem, index) in speakersItems"
-        :key="index"
-        image-position="left"
-        :image-src="speakerItem.image"
-        :title="speakerItem.name"
-        :description="speakerItem.description"
-        :redirect="getProductRoutes(speakerItem)"
-      />
+      <ProductSection v-for="(speakerItem, index) in speakersItems" :key="index" image-position="left"
+        :image-src="speakerItem.image" :title="speakerItem.name" :description="speakerItem.description"
+        :redirect="getProductRoutes(speakerItem)" />
       <ItemsSection :item-related="speakersItems[0].relatedCategories" />
       <MarketingService />
     </div>
