@@ -1,11 +1,7 @@
 <template>
-  <div
-    class="mt-14 flex justify-center md:items-center flex-col md:flex-row gap-8"
-  >
+  <div class="mt-14 flex justify-center md:items-center flex-col md:flex-row gap-8">
     <img class="w-full rounded-lg max-w-2xl md:w-1/2" :src="imageSrc" alt="" />
-    <div
-      class="flex flex-col justify-center items-center md:items-start md:w-1/2"
-    >
+    <div class="flex flex-col justify-center items-center md:items-start md:w-1/2">
       <p class="uppercase text-lg text-center md:text-left">
         {{ title }}
       </p>
@@ -14,10 +10,7 @@
       </p>
       <p class="text-m mt-8">$ {{ price }}</p>
       <div class="mt-10">
-        <button
-          class="uppercase bg-orange p-3 my-4 text-white"
-          @click="productCta"
-        >
+        <button class="uppercase bg-orange p-3 my-4 text-white" @click="productCta">
           Add to cart
         </button>
       </div>
@@ -33,7 +26,9 @@ defineProps<{
   imageSrc: string;
 }>();
 
-const emit = defineEmits(["productCta"]);
+const emit = defineEmits<{
+  (e: 'productCta'): void;
+}>();
 
 const productCta = () => {
   emit("productCta");

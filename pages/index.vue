@@ -34,7 +34,7 @@ import { ProductDetails } from "interfaces/audioProduct";
 import { getAudioProduct } from "~/data/getData";
 
 
-const { data: productList, pending, error } = useAsyncData<ProductDetails[]>('uniqueKey', getAudioProduct);
+const { data: productList, pending, error } = useAsyncData<ProductDetails[]>(getAudioProduct);
 const redirectToProduct = async (category: string | undefined, slug: string | undefined) => {
   if (category && slug) await navigateTo(`/${category}/${slug}`);
 };
