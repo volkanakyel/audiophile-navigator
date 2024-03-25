@@ -1,18 +1,28 @@
 <template>
-  <div class="w-96 bg-white text-black rounded-lg p-8">
-    <div class="flex justify-between mb-8">
-      <p class="uppercase">Cart {{ store.getCartItems.length }}</p>
-      <p class="uppercase cursor-pointer" @click="clearCart">Remove All</p>
+  <div>
+    <Teleport to="body">
+      <transition name="fade">
+        <div v-show="store.getCartState" class="fixed inset-0 bg-black bg-opacity-40 z-40" @click="closeCart"></div>
+      </transition>
+    </Teleport>
+    <div v-show="store.getCartState" class="absolute right-0 mt-16 w-96 bg-white text-black rounded-lg z-50">
+      <div class="p-8">
+        <div class="flex justify-between mb-8">
+          <p class="uppercase">Cart {{ cartItems.length }}</p>
+          <p class="uppercase cursor-pointer" @click="clearCart">Remove All</p>
+        </div>
+        <CartItem v-for="(product, index) in cartItems" :key="index" is-summary-section class="mb-6"
+          :product="product" />
+        <div class="flex justify-between mb-8">
+          <p class="uppercase">Total</p>
+          <p class="uppercase">$ {{ totalPrice }}</p>
+        </div>
+        <button :disabled="cartItems.length === 0" @click="redirectToCheckout"
+          class="uppercase w-full bg-orange p-3 text-white rounded">
+          Checkout
+        </button>
+      </div>
     </div>
-    <CartItem v-for="(product, index) in cartItems" :key="index" is-summary-section class="mb-6" :product="product" />
-    <div class="flex justify-between mb-8">
-      <p class="uppercase">Total</p>
-      <p class="uppercase">$ {{ totalPrice }}</p>
-    </div>
-    <button :disabled="cartItems.length === 0" @click="redirectToCheckout"
-      class="uppercase w-full bg-orange p-3 text-white">
-      Checkout
-    </button>
   </div>
 </template>
 
@@ -22,11 +32,21 @@ const store = useFiltersStore();
 const cartItems = store.getCartItems;
 const totalPrice = store.getTotalPrice;
 const clearCart = () => store.clearCartContent();
+const closeCart = () => store.closeCartPanel();
 
 const redirectToCheckout = async () => {
   store.closeCartPanel();
   await navigateTo(`/checkout`);
 }
 </script>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
 
-<style scoped></style>
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

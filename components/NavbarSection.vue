@@ -16,22 +16,24 @@
             class="hover:text-orange">Earphones</nuxt-link>
         </nav>
         <img src="/images/shared/desktop/icon-cart.svg" alt="cart" class="hover:fill-orange" @click="openCart" />
-        <CartViewer v-if="filterStore.getCartState" v-on-click-outside="onClickOutsideHandler"
-          class="absolute right-0 top-20" />
+        <transition enter-active-class="transition ease-out duration-200 transform "
+          enter-from-class="opacity-0 translate-y-10 scale-95" enter-to-class="opacity-100 translate-y-0 scale-100"
+          leave-active-class="ease-in duration-200" leave-from-class="opacity-100 translate-y-0 scale-100"
+          leave-to-class="opacity-0 translate-y-10 translate-y-0 scale-95">
+          <div v-show="filterStore.getCartState" class="absolute right-0 mt-2">
+            <CartViewer />
+          </div>
+        </transition>
       </div>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { vOnClickOutside } from "@vueuse/components";
 import { useFiltersStore } from "~/store/cart";
 
 const filterStore = useFiltersStore();
 const openCart = () => filterStore.openCartPanel();
-const onClickOutsideHandler = () => {
-  filterStore.closeCartPanel();
-};
 
 const route = useRoute();
 
