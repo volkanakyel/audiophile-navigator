@@ -1,23 +1,17 @@
 <template>
   <div class="w-full">
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center gap-4">
       <div class="flex gap-4 items-center">
-        <img
-          :src="product.image"
-          width="64"
-          height="64"
-          alt="product"
-          class="rounded-lg"
-        />
+        <img :src="product.image" width="64" height="64" alt="product" class="rounded-lg" />
         <div>
           <p>{{ product.name }}</p>
-          <p>$ {{ product.price }}</p>
+          <p class=" opacity-50">$ {{ product.price }}</p>
         </div>
       </div>
-      <div v-if="isSummarySection" class="flex gap-2 bg-grey-100 py-2 px-3">
-        <p @click="removeQuantity(product)">-</p>
-        <p>{{ product.quantity }}</p>
-        <p @click="addQuantity(product)">+</p>
+      <div v-if="isSummarySection" class="flex gap-5 bg-grey-100 py-2 px-3">
+        <p class=" opacity-50" @click="removeQuantity(product)">-</p>
+        <p class=" font-bold">{{ product.quantity }}</p>
+        <p class=" opacity-50" @click="addQuantity(product)">+</p>
       </div>
       <div v-else>
         <p>x{{ product.quantity }}</p>

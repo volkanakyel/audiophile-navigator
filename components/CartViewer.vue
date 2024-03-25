@@ -9,16 +9,16 @@
       <div class="p-8">
         <div class="flex justify-between mb-8">
           <p class="uppercase">Cart {{ cartItems.length }}</p>
-          <p class="uppercase cursor-pointer" @click="clearCart">Remove All</p>
+          <p class=" capitalize opacity-50 cursor-pointer underline" @click="clearCart">Remove All</p>
         </div>
         <CartItem v-for="(product, index) in cartItems" :key="index" is-summary-section class="mb-6"
           :product="product" />
         <div class="flex justify-between mb-8">
-          <p class="uppercase">Total</p>
-          <p class="uppercase">$ {{ totalPrice }}</p>
+          <p class="uppercase opacity-50">Total</p>
+          <p class="uppercase font-bold">$ {{ totalPrice }}</p>
         </div>
         <button :disabled="cartItems.length === 0" @click="redirectToCheckout"
-          class="uppercase w-full bg-orange p-3 text-white rounded">
+          class="uppercase w-full bg-orange p-3 text-white rounded font-bold">
           Checkout
         </button>
       </div>
@@ -31,13 +31,18 @@ import { useFiltersStore } from "~/store/cart";
 const store = useFiltersStore();
 const cartItems = store.getCartItems;
 const totalPrice = store.getTotalPrice;
-const clearCart = () => store.clearCartContent();
 const closeCart = () => store.closeCartPanel();
 
 const redirectToCheckout = async () => {
   store.closeCartPanel();
   await navigateTo(`/checkout`);
 }
+
+const clearCart = () => {
+  store.clearCartContent();
+  closeCart();
+}
+
 </script>
 <style scoped>
 .fade-enter-active,
