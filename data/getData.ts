@@ -4,6 +4,6 @@ export const getAudioProduct = ():Promise<ProductDetails[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(data);
-    }, 2000);
+    });
   })
 }
