@@ -1,24 +1,24 @@
 <template>
   <div class="px-7">
     <div class="bg-white max-w-6xl mx-auto">
-      <ProductSection
-        v-for="(earphoneItem, index) in earphonesItems"
-        :key="index"
-        image-position="left"
-        :image-src="earphoneItem.image"
-        :title="earphoneItem.name"
-        :description="earphoneItem.description"
-        :redirect="getProductRoutes(earphoneItem)"
-      />
-      <ItemsSection :item-related="earphonesItems[0].relatedCategories" />
+      <ProductSection v-for="(earphoneItem, index) in earphonesItems" :key="index" image-position="left"
+        :image-src="earphoneItem.image" :title="earphoneItem.name" :description="earphoneItem.description"
+        :redirect="getProductRoutes(earphoneItem)" />
+      <ItemsSection :item-related="getRelatedItems" />
       <MarketingService />
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { ProductDetails } from "interfaces/audioProduct";
-import data from "~/data/data";
-const earphonesItems = data.filter((data) => data.category === "earphones");
+import { ProductDetails, SiblingsProduct, ProductCategory } from "interfaces/audioProduct";
+import { getAudioProduct } from "~/data/getData";
+
+const { data } = await useAsyncData<ProductDetails[]>(getAudioProduct);
+const earphonesItems = data.value?.filter((item): item is ProductDetails => item.category === "earphones" as ProductCategory);
+
+const getRelatedItems = computed<SiblingsProduct[] | undefined>(() => {
+  return earphonesItems ? earphonesItems[0].relatedCategories : undefined;
+})
 const getProductRoutes = (item: ProductDetails) => {
   return `/${item.category}/${item.slug}`;
 };

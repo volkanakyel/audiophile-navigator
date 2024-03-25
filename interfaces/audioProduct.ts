@@ -3,6 +3,8 @@ interface IncludedItem {
   item: string;
 }
 
+type ProductCategory = 'headphones' | 'speakers' | 'earphones';
+
 interface ImageGallery {
   first: string;
   second: string;
@@ -47,4 +49,4 @@ interface cartItem {
   totalPrice: number;
 }
 
-export { ProductDetails, cartItem, ProductItem, SiblingsProduct };
+export { ProductDetails, cartItem, ProductItem, SiblingsProduct, ProductCategory };

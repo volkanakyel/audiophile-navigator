@@ -10,10 +10,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ProductDetails, SiblingsProduct } from "interfaces/audioProduct";
+import { ProductDetails, SiblingsProduct, ProductCategory } from "interfaces/audioProduct";
 import { getAudioProduct } from "~/data/getData";
 const { data } = await useAsyncData<ProductDetails[]>(getAudioProduct);
-const headphonesItems = <ProductDetails[] | undefined>data.value?.filter((data) => data.category === "headphones");
+const headphonesItems = data.value?.filter((item): item is ProductDetails => item.category === "headphones" as ProductCategory);
 const getRelatedItems = computed<SiblingsProduct[] | undefined>(() => {
   return headphonesItems ? headphonesItems[0].relatedCategories : undefined;
 })
