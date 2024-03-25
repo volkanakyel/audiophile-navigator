@@ -12,12 +12,13 @@
           See Product
         </button>
       </div>
-      <div class="mt-20 flex justify-center gap-8 items-center flex-col md:flex-row">
+      <div class="py-20 flex justify-center gap-8 items-center flex-col md:flex-row">
         <img class="rounded-lg hidden md:block w-1/2" src="/images/product-yx1-earphones/desktop/image-gallery-2.jpg"
           alt="" />
         <img class="w-full rounded-lg md:hidden" src="/images/product-yx1-earphones/mobile/image-gallery-2.jpg"
           alt="" />
-        <div class="w-full bg-grey-100 flex flex-col items-start justify-center p-10 rounded-lg md:w-1/2 md:p-14">
+        <div
+          class="w-full self-stretch bg-grey-100 flex flex-col items-start justify-center p-10 rounded-lg md:w-1/2 md:p-14">
           <p class="text-l mb-8 uppercase">{{ earphoneItem?.slug }}</p>
           <button class="bg-black text-white p-4 uppercase"
             @click="redirectToProduct(earphoneItem?.category, earphoneItem?.slug)">

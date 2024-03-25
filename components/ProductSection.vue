@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 flex justify-center md:items-center flex-col md:flex-row gap-8">
+  <div class="my-20 flex justify-center md:items-center flex-col md:flex-row gap-8">
     <img v-if="imagePosition === 'left'" class="w-full rounded-lg max-w-2xl md:w-1/2" :src="imageSrc" alt="" />
     <img v-if="imagePosition === 'right'" class="w-full rounded-lg max-w-2xl md:w-1/2 block md:hidden" :src="imageSrc"
       alt="" />
