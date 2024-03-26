@@ -14,6 +14,7 @@ defineProps<{
   itemProduct: SiblingsProduct;
 }>();
 const redirectToProduct = async (category: string, slug: string) => {
+  console.log(`/${category.toLocaleLowerCase()}/${slug}`);
   await navigateTo(`/${category.toLocaleLowerCase()}/${slug}`);
 };
 </script>

@@ -9,8 +9,8 @@
       <ProductFeatures :featureList="obj" />
       <RecommendationItems :recommendedProduct="obj.others" />
       <ItemsSection :item-related="obj.relatedCategories" />
+      <MarketingService />
     </div>
-    <MarketingService />
   </div>
 </template>
 <script setup lang="ts">
@@ -40,4 +40,3 @@ const goToCategory = async () => {
   }
 };
 </script>
-data/data data/data
