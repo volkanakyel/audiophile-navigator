@@ -5,7 +5,7 @@
         Go back
       </p>
       <BuyProduct :image-src="obj.image" :description="obj.description" :title="obj.name" :price="obj.price"
-        @product-cta="addItemToCart(obj)" />
+        @product-cta="addItemToCart(obj)" :newItem="obj.new" />
       <ProductFeatures :featureList="obj" />
       <RecommendationItems :recommendedProduct="obj.others" />
       <ItemsSection :item-related="obj.relatedCategories" />

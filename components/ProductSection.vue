@@ -4,7 +4,7 @@
     <img v-if="imagePosition === 'right'" class="w-full rounded-lg max-w-2xl md:w-1/2 block md:hidden" :src="imageSrc"
       alt="" />
     <div class="flex flex-col justify-center items-center md:items-start md:w-1/2">
-      <p class="uppercase mb-4 text-orange md:text-left">New Product</p>
+      <p v-if="newItem" class="uppercase mb-4 text-orange md:text-left">New Product</p>
       <p class="uppercase text-lg text-center md:text-left">
         {{ title }}
       </p>
@@ -27,6 +27,7 @@ const props = defineProps<{
   imageSrc: string;
   redirect: string;
   imagePosition?: "left" | "right";
+  newItem: boolean;
 }>();
 const goToProduct = async () => {
   await nextTick(() => {

@@ -2,6 +2,7 @@
   <div class="mt-14 flex justify-center md:items-center flex-col md:flex-row gap-8">
     <img class="w-full rounded-lg max-w-2xl md:w-1/2" :src="imageSrc" alt="" />
     <div class="flex flex-col justify-center items-center md:items-start md:w-1/2">
+      <p v-if="new" class=" text-orange uppercase">New Product</p>
       <p class="uppercase text-lg text-center md:text-left">
         {{ title }}
       </p>
@@ -24,6 +25,7 @@ defineProps<{
   description: string;
   price: number;
   imageSrc: string;
+  newItem: boolean;
 }>();
 
 const emit = defineEmits<{
