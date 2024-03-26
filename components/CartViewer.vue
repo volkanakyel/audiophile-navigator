@@ -30,7 +30,7 @@
 import { useFiltersStore } from "~/store/cart";
 const store = useFiltersStore();
 const cartItems = store.getCartItems;
-const totalPrice = store.getTotalPrice;
+const totalPrice = computed(() => store.getTotalPrice);
 const closeCart = () => store.closeCartPanel();
 
 const redirectToCheckout = async () => {
