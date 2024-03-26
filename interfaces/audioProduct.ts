@@ -15,6 +15,7 @@ interface SiblingsProduct {
   slug: string;
   name: string;
   image: string;
+  category: string;
 }
 
 interface ProductDetails {
