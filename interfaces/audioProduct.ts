@@ -49,4 +49,4 @@ interface cartItem {
   totalPrice: number;
 }
 
-export { ProductDetails, cartItem, ProductItem, SiblingsProduct, ProductCategory };
+export { ProductDetails, cartItem, ProductItem, SiblingsProduct, ProductCategory, IncludedItem };
