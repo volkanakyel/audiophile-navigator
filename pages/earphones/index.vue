@@ -1,11 +1,16 @@
 <template>
-  <div class="px-7">
-    <div class="bg-white max-w-6xl mx-auto">
-      <ProductSection v-for="(earphoneItem, index) in earphonesItems" :key="index" image-position="left"
-        :image-src="earphoneItem.image" :title="earphoneItem.name" :description="earphoneItem.description"
-        :redirect="getProductRoutes(earphoneItem)" />
-      <ItemsSection :item-related="getRelatedItems" />
-      <MarketingService />
+  <div>
+    <div class="bg-dark-100 w-full text-center py-16">
+      <h1 class="text-white font-bold uppercase text-lg">Earphones</h1>
+    </div>
+    <div class="px-7">
+      <div class="bg-white max-w-6xl mx-auto">
+        <ProductSection v-for="(earphoneItem, index) in earphonesItems" :key="index" image-position="left"
+          :image-src="earphoneItem.image" :title="earphoneItem.name" :description="earphoneItem.description"
+          :redirect="getProductRoutes(earphoneItem)" />
+        <ItemsSection :item-related="getRelatedItems" />
+        <MarketingService />
+      </div>
     </div>
   </div>
 </template>
