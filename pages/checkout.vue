@@ -107,6 +107,11 @@
 </template>
 <script setup lang="ts">
 import { useFiltersStore } from "~/store/cart";
+
+useHead({
+  title: "Checkout",
+})
+
 const store = useFiltersStore();
 const cartItems = store.getCartItems;
 </script>

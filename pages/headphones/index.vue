@@ -18,6 +18,11 @@
 <script setup lang="ts">
 import { ProductDetails, SiblingsProduct, ProductCategory } from "interfaces/audioProduct";
 import { getAudioProduct } from "~/data/getData";
+
+useHead({
+  title: "Headphones",
+})
+
 const { data } = await useAsyncData<ProductDetails[]>(getAudioProduct);
 const headphonesItems = data.value?.filter((item): item is ProductDetails => item.category === "headphones" as ProductCategory);
 const getRelatedItems = computed<SiblingsProduct[] | undefined>(() => {

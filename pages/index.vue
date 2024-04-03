@@ -34,7 +34,9 @@
 import { ProductDetails } from "interfaces/audioProduct";
 import { getAudioProduct } from "~/data/getData";
 
-
+useHead({
+  title: 'Home',
+})
 const { data: productList, pending, error } = await useAsyncData<ProductDetails[]>(getAudioProduct);
 const redirectToProduct = async (category: string | undefined, slug: string | undefined) => {
   if (category && slug) await navigateTo(`/${category}/${slug}`);

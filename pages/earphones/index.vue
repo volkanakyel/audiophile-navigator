@@ -18,6 +18,10 @@
 import { ProductDetails, SiblingsProduct, ProductCategory } from "interfaces/audioProduct";
 import { getAudioProduct } from "~/data/getData";
 
+useHead({
+  title: "Earphones",
+})
+
 const { data } = await useAsyncData<ProductDetails[]>(getAudioProduct);
 const earphonesItems = data.value?.filter((item): item is ProductDetails => item.category === "earphones" as ProductCategory);
 

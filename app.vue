@@ -7,7 +7,9 @@
 </template>
 <script lang="ts" setup>
 useHead({
-  title: 'Audiophile'
+  titleTemplate: (title) => {
+    return title ? `${title} - Audiophile` : `Audiophile`
+  },
 })
 </script>
 <style>

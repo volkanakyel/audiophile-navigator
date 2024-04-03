@@ -18,6 +18,9 @@
 import { ProductDetails, SiblingsProduct, ProductCategory } from "interfaces/audioProduct";
 import { getAudioProduct } from "~/data/getData";
 
+useHead({
+  title: "Speaker",
+})
 const { data } = await useAsyncData<ProductDetails[]>(getAudioProduct);
 const speakersItems = data.value?.filter((item): item is ProductDetails => item.category === "speakers" as ProductCategory);
 const getRelatedItems = computed<SiblingsProduct[] | undefined>(() => {

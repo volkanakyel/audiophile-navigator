@@ -39,4 +39,8 @@ const goToCategory = async () => {
     throw createError({ statusCode: 404, statusMessage: "Product not found" });
   }
 };
+
+useHead({
+  title: obj.name,
+})
 </script>

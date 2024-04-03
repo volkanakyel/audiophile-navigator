@@ -17,17 +17,7 @@
 import { ProductDetails, ProductItem } from "interfaces/audioProduct";
 import data from "~/data/data";
 import { useFiltersStore } from "~/store/cart";
-const filterStore = useFiltersStore();
-const addItemToCart = (product: ProductDetails) => {
-  const productItem: ProductItem = {
-    name: product.name,
-    price: product.price,
-    quantity: 1,
-    image: product.image,
-  };
-  filterStore.openCartPanel();
-  filterStore.addItemToCart(productItem);
-};
+
 const { id } = useRoute().params;
 const obj: ProductDetails = data.find((product) => product.slug === id)!;
 const goToCategory = async () => {
@@ -39,5 +29,21 @@ const goToCategory = async () => {
     throw createError({ statusCode: 404, statusMessage: "Product not found" });
   }
 };
+
+useHead({
+  title: obj.name,
+})
+const filterStore = useFiltersStore();
+const addItemToCart = (product: ProductDetails) => {
+  const productItem: ProductItem = {
+    name: product.name,
+    price: product.price,
+    quantity: 1,
+    image: product.image,
+  };
+  filterStore.openCartPanel();
+  filterStore.addItemToCart(productItem);
+};
+
 </script>
 data/data data/data
